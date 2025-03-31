@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "lint": "standard --fix",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "build:android:apk": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
