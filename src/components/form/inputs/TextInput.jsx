@@ -23,6 +23,7 @@ function TextInput ({
       {label && <Text style={styles.label}>{label} :</Text>}
       <View style={styles.inputWrapper}>
         <Base
+          {...props}
           onFocus={() => setIsFocus(true)}
           onBlur={() => setIsFocus(false)}
           multiline={textarea}
@@ -36,11 +37,11 @@ function TextInput ({
                 : isFocus
                   ? styles.inputFocused
                   : null,
-              textarea && styles.textarea
+              textarea && styles.textarea,
+              props.style
             ]
           }
           placeholder={placeholder}
-          {...props}
         />
         {error && <Text style={styles.error}>{error}</Text>}
       </View>
